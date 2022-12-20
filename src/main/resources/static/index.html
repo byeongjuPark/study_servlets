@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,149 @@
 </head>
 
 <body>
-    <div>index.html</div>
+    <div>toy index.html</div>
+    <a href="/pollListServlet">pollListServlet</a>
+    <form action="/pollListServlet" method="get">
+        <button>PollListServlet</button>
+    </form>
+</body>
+
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <style>
+            table.document-list tbody {
+                display: block;
+                height: 210px;
+                overflow: auto;
+            }
+
+            table.document-list thead,
+            tbody tr {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+            }
+        </style>
+        <div class="container">
+            <div class="row justify-content-center align-items-center mt-5">
+                <div class="col-md-8">
+                    <div class="card border-dark">
+                        <div class="card-hearder bg-dark text-center text-white py-2">
+                            <h5 class="mb-0">Servlet Document List</h5>
+                        </div>
+                        <div class="p-3">
+                            <table class="document-list table table-striped">
+                                <thead class="bg-dark text-white">
+                                    <tr>
+                                        <th scope="col" width="82px">번호.</th>
+                                        <th scope="col"></th>
+                                        <th scope="col" width="82px">Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td> PollListServlet</td>
+                                        <td width="82px"><a href="/pollListServlet" style="padding-right: 20px;"><i
+                                                    class="fa fa-trash text-danger" aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>SimpleWithDBServlets</td>
+                                        <td width="82px"><a href="/simple/simpleWithDBServlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>CreateCookieSurvlets</td>
+                                        <td width="82px"><a href="/cookies/createSurvlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>GetAndDeleteSurvlets</td>
+                                        <td width="82px"><a href="/cookies/getAndDeleteSurvlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>CreateSessionSurvlets</td>
+                                        <td width="82px"><a href="/session/createSessionSurvlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>GetSessionSurvlets</td>
+                                        <td width="82px"><a href="/session/getSessionSurvlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>DispatcherJSPServlets</td>
+                                        <td width="82px"><a href="/dispatcherJSPServlets"
+                                                style="padding-right: 20px;"><i class="fa fa-trash text-danger"
+                                                    aria-hidden="true">Link</i></a>
+                                            <a href=""><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

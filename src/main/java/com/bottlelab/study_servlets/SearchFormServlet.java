@@ -2,6 +2,7 @@ package com.bottlelab.study_servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -13,10 +14,17 @@ import jakarta.servlet.http.HttpServletResponse;
 public class SearchFormServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //UTF-8 인코딩 설정(한글 깨짐 방지)
+        //네트워크를 타기 이전에 설정해서 보내줘야함
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = response.getWriter();
+        DatasInfor datasInfor = new DatasInfor();
+        HashMap<String, String> searchFormData = datasInfor.getSearchFormData();
+        String title = searchFormData.get("search_key");
+
         printWriter.println("<html lang='en'>");
         printWriter.println("<head>");
-        printWriter.println("<title>Title</title>");
+        printWriter.println("<title>"+title+"</title>");
         printWriter.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet'");
         printWriter.println("integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous'>");
         printWriter.println("<link rel='stylesheet' href='./css/common.css' />");
