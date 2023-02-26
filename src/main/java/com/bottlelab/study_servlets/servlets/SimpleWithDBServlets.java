@@ -41,3 +41,5 @@ public class SimpleWithDBServlets extends HttpServlet {
         printWriter.close();
     }
 }
+
+

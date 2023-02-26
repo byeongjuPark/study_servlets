@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 // /session/createSessionSurvlets?username=bottlepark&password=1234
-@WebServlet(urlPatterns = "/session/createSessionSurvlets")
+@WebServlet(urlPatterns = "/session/createSurvlets")
 public class CreateSessionSurvlets extends HttpServlet {
    @Override
    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,5 +38,11 @@ public class CreateSessionSurvlets extends HttpServlet {
          printWriter.println("<div>Failed</div>");
       }
       printWriter.close();
+   }
+
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // TODO Auto-generated method stub
+      this.doGet(req, resp);
    }
 }
